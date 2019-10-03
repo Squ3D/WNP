@@ -1,0 +1,152 @@
+<!--Author Naïm !-->
+<!Doctype html>
+<style>
+body {
+background-color: #03224c;
+}
+
+p
+{
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+h1
+{
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    font-size: 100px;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  display: block;
+  background-color: grey;
+  border-size : grey;
+}
+
+#wasabi {
+  width: 400px;
+  height : 620px;
+  background-color: grey;
+  border-radius: 19px;
+  opacity: 0.4;
+}
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+</style>
+
+<meta charset="utf-8">
+<title>Tp2</title>
+<body background-color: brown;>
+<HEAD>
+<SCRIPT LANGUAGE="javascript">
+function controle(form1) {
+var champ = document.form1.input.value;
+var champ1 = document.form1.input1.value;
+var champ2 = document.form1.input2.value;
+if( /(.+)@(.+){2,}\.(.+){2,}/.test(champ2) ){
+  prompt("Votre email est valide");
+} else {
+  prompt("Votre email est invalide");
+}
+
+var champ3 = document.form1.input3.value;
+alert("Votre Matricule : " + champ +" Votre Nom : " +champ1+" Votre Mail : "+champ2+"Votre code Diplome : "+champ3);
+}
+
+var imageWidthHalf, imageHeightHalf;
+
+      var canvas = document.createElement( 'canvas' );
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.display = 'block';
+      document.body.appendChild( canvas );
+
+      var context = canvas.getContext( '2d' );
+
+      var image = document.createElement( 'img' );
+
+      image.addEventListener('load', function() {
+
+        imageWidthHalf = Math.floor( this.width / 2 );
+        imageHeightHalf = Math.floor( this.height / 2 );
+
+        document.addEventListener( 'mousemove', onMouseEvent, false );
+        document.addEventListener( 'touchstart', onTouchEvent, false );
+        document.addEventListener( 'touchmove', onTouchEvent, false );
+
+      }, false );
+
+      image.src = "https://i.imgur.com/GQuMUz2.png";
+
+      function onMouseEvent( event ) {
+
+        context.drawImage( image, event.clientX - imageWidthHalf, event.clientY - imageHeightHalf );
+
+      }
+
+      function onTouchEvent( event ) {
+
+        event.preventDefault();
+
+        for ( var i = 0; i < event.touches.length; i++ ) {
+
+          context.drawImage( image, event.touches[i].pageX - imageWidthHalf, event.touches[i].pageY - imageHeightHalf );
+
+        }
+
+      }
+
+
+
+
+
+
+</SCRIPT>
+<center><h1>Formulaire entrée utilisateur</h1></center>
+</HEAD>
+<BODY>
+  <center>
+<FORM NAME="form1">
+  <div id ="wasabi">
+<p>Matricule : <INPUT TYPE="text" NAME="input" VALUE=""></p>
+<p>Nom : <input type="text" name="input1" size="20"></p>
+<p>Mail : <input type="text" name="input2" size="20"></p>
+ <p>codeDiplome : <input type="text" name="input3" size="20"></p>
+
+ <button type="button" NAME="bouton" VALUE="Validez" onClick="controle(form1)">Validez</button>
+</div>
+ </FORM>
+</center>
+
+</BODY>
+</HTML>
+
+
+  <!--
+  <center><h1>Formulaire entrée Etudiant</h1></center>
+  <center>
+
+   <p>Matricule : <input type="text" name="T1" size="20"></p>
+   <p>Nom :<input type="text" name="T1" size="20"></p>
+    <p>Mail :<input type="text" name="T1" size="20"></p>
+      <p>codeDiplome : <input type="text" name="T1" size="20"></p>
+
+
+    <p><input type="button" value="Validez" onClick="controle(form1)"></p>
+
+  </center>-->
+
+  

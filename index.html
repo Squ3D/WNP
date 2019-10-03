@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    
+
+	<title>
+		Formulaire
+	</title>
+
+</head>
+
+
+<body>
+
+    <p><script type="text/javascript" src="script.js"></script></p>
+
+    <div class="shadow">
+  <form  name = "allo" method="post" action="traitement.php">
+    <p>
+        <h1> Login  </h1>
+
+        <label for="pseudo">Votre pseudo : </label>
+        <input type="text" name="pseudo" id="pseudo" /> 
+        </p>
+
+        <label for="matricule">Votre matricule : </label>
+        <input type="text" name="matricule" id="matricule" placeholder="Ex : 12" size="30" maxlength="10" /> 
+        
+       <label for="mail">Votre mail :</label> 
+       <br><input type="email" name="mail" />
+
+       <section class="container">
+           
+            <div class="dropdown dropdown-dark">
+              <select name="two" class="dropdown-select">
+                <option value="">Selectionner votre diplôme</option>
+                <option value="1">Assurance</option>
+                <option value="2">Informatique</option>
+                <option value="3">Commerce</option>
+              </select>
+            </div>
+          </section>
+
+          <div class="button">
+          <input type="button" value="Me connecter" onclick="control(allo)" >
+          
+            </div>
+    
+       <!--
+      
+       
+       <br>
+       
+        <label for="ville ">Quel est votre lieu de travail ?</label><br />
+       <select name="viller" id="ville">
+           <option value="Choissir"> choissir dans la liste</option>
+           <option value="Lille">Lille</option>
+           <option value="Paris">Paris</option>
+           <option value="Marseilles">Marseilles</option>
+           <option value="Rennes">Rennes</option>
+           </select>
+       
+           <br>
+          
+           
+
+           <p>
+            Quel système informatique utilisez vous? :<br />
+            <input type="checkbox" name="macos" id="macos" /> <label for="macos">Mac os</label><br />
+            <input type="checkbox" name="linux" id="linux" /> <label for="linux">Linux</label><br />
+            <input type="checkbox" name="window" id="window" /> <label for="window">Window</label><br />
+        
+        </p>
+
+
+
+            <br>
+            
+             <label for="salaries ">Quel est le nombre de salariés ?</label><br />
+       <select name="salaries" id="salaries">
+           <option value="Choissir"> choissir dans la liste</option>
+           <option value="inf"> - de 10 </option>
+           <option value="egal"> de 10 à 50 </option>
+           <option value="sup"> + de 50 </option>
+          
+           </select>
+           
+           </p>
+   
+  
+  <label for="commentaire">
+       Avez-vous un commentaire à faire? ?
+       </label>
+       <br />
+       
+       <textarea name="commentaire" id="commentaire" rows="10" cols="50">
+       Une sugestion à faire?
+       </textarea> 
+    -->
+
+
+       
+</form>
+   
+
+    
+   
+  
+  </p>
+</nav>
+</body>
+</html>

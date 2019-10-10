@@ -8,6 +8,6 @@ Auteur :
 - Naïm Gallouj
 - Perrine François
 
-Partie 1 : Site Web Dynamique (Php,Mysql,JS).
-Partie 2 : Client lourd (Java)
-Partie 3 : Application Mobile (java android)
+- Partie 1 : Site Web Dynamique (Php,Mysql,JS). Répertoire : Web
+- Partie 2 : Client lourd (Java) Répertoire : Client
+- Partie 3 : Application Mobile (java android) Répertoire : Appli

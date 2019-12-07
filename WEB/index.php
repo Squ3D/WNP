@@ -1,3 +1,29 @@
+<?php
+
+session_start();
+  
+  require_once "config.php";
+  $Matricule = $_POST['Matricule'];
+  $password = $_POST['password'];
+ 
+$query = $conn->prepare("SELECT COUNT(*) FROM employe WHERE password ='$password' AND Num_Matricule ='$Matricule' ");
+
+$query->execute();
+$count = $query->fetchColumn();    
+if ($count=="1"){
+    $_SESSION['Matricule'] = $Matricule;
+    $_Nom['Nom'] = $Nom;
+    echo '<meta http-equiv="refresh" content="1;URL=./Panel/index.php">';
+}else {
+    if($count != "1") {
+    echo "<p>";
+    echo "<font color=red>Combinaison Matricule/Mots de passe incorrect</font>";
+
+    echo"</p>";
+    }
+}
+?>
+
 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -5,41 +31,6 @@
 <title>Login</title>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<?php
-
-session_start();
-  require_once "config.php";
-  
-  $Matricule = $_POST['Matricule'];
-  $password = $_POST['password'];
- 
-$query = $conn->prepare("SELECT COUNT(*) FROM employe WHERE password ='$password' AND Num_Matricule ='$Matricule' ");
-
-
-
-$query->execute();
-$count = $query->fetchColumn();    
-if ($count=="1"){
-    $_SESSION['Matricule'] = $Matricule;
-    echo '<meta http-equiv="refresh" content="1;URL=./Panel/index.php">';
-    
-    echo"<p>";
-    echo "<font color=green><strong>Connecté, Bienvenue vous allez être redirigé...</strong></font>";
-    echo "</h3></p>";
-    echo "Bienvenue Matricule : " . $Matricule;
-
-    
-    
-    
-}else {
-    echo "<p>";
-    echo "<font color=red>Non Connecté</font>";
-
-    echo"</p>";
-}
- 
-
-?>
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
@@ -53,7 +44,7 @@ if ($count=="1"){
     <!-- Login Form -->
     <form method="post">
       <input type="text" id="login" class="fadeIn second" name="Matricule" placeholder="Matricule">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Mot de Passe">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Mot de Passe">
       <input type="submit" class="fadeIn fourth" value="Connexion">
     </form>
 

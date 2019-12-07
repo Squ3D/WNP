@@ -1,6 +1,8 @@
 <?php
   session_start();
   require_once "config.php";
+  
+  //Utiliser l'extract $POST
   $numFiche = $_POST['1'];
   $adresse = $_POST['2'];
   $date_visite = $_POST['3'];
@@ -12,90 +14,70 @@
     
   $query = $conn->prepare("INSERT INTO Intervention (Numero_Fiche, adresse, date_visite, heure_visite,Num_Matricule, Code_Client)
       VALUES ($numFiche, $adresse, $date_visite,$heure_visite,$Matricule,$code_Client)");
-       $query->execute();
-       echo "<br/><br/><span>Data Inserted successfully...!!</span>";
       
-    }else {
-        echo "<br/><br/><span>Nothing inserted yet</span>";
-    }
-    
-    
-
+       $query->execute();
+     }
   ?>
 
 <style>
-#navbar ul { 
-	margin: 0; 
-	padding: 5px; 
-	list-style-type: none; 
-	text-align: center; 
-	background-color: #22427c; 
-	} 
- 
-#navbar ul li {  
-	display: inline; 
-	} 
- 
-#navbar ul li a { 
-	text-decoration: none; 
-	padding: .2em 1em; 
-	color: #fff; 
-	background-color: #000; 
-	opacity : 0.3;
-	} 
- 
-#navbar ul li a:hover { 
-	color: #000; 
-	background-color: #fff; 
-	} 
- #welcome {
-     text-align : center;
- }
- 
- #box {
-     background-color : #ADD8E6;
-     margin-top : 30px;
-    margin: 0 auto;
-     width: 100px; 
-     width : 50%;
-     height : 50%;
-     text-align : center;
- }
-    
-</style>
-<link type="stylesheet" href="./CSS/style.css">
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
 
-<div id="navbar"> 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+#box {
+    text-align : center;
+    margin left : auto;
+    margin right : auto;
+}
+</style>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://www.naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
+
   <ul> 
 	<li><a href="./client.php">Fiche Client</a></a></li> 
 	<li><a href="./intervention.php">Intervention</a></a></li> 
 	<li><a href="./statistique.php">Statistique</a></li> 
-	<li><a href="" value="deco">Déconnexion</a></li>
+	<li><a href="https://www.naimo.me/CASHCASH/logout.php" value="deco">Déconnexion</a></li>
   </ul> 
   
+  
   <body background-color : blue>
-    <center><h1>Création Fiche Intervention</h1></center>
+    <center><h1>Création Intervention</h1></center>
       
       <div id="box">
           <form name ="wata" method="post">
               
-              <p>
-                  
-              </p>
     
-     <p> Numéro Fiche : <input type="text" id="login" class="fadeIn second" name="1" placeholder="Numéro de fiche (sera auto par la suite)">
+<p>Numéro      <input type="text" id="login" class="fadeIn second" name="1" placeholder="Renseigner le numéro de fiche" size="200"></p>
+<p>Adresse     <input type="text" id="password" class="fadeIn third" name="2" placeholder="adresse"></p>
+<p>Heures      <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"></p>
+<p>Matric      <input type="text" id="login" class="fadeIn second" name="5" placeholder="Renseigner Numéro de Matricule"></p>
+<p>Cclient      <input type="text" id="password" class="fadeIn third" name="6" placeholder="Renseigner le code Client"></p>
+<p><input type="Date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"></p>
       
-                Adresse : <input type="text" id="password" class="fadeIn third" name="2t" placeholder="adresse">
-      </p>
-      Date visite : <input type="Date" id="login" class="fadeIn second" name="3" placeholder="Datre de visite">
-      
-      Heure Visite<input type="text" id="password" class="fadeIn third" name="4" placeholder="Heure de visite">
-      <p>
-      Num Matricule <input type="textarea" id="login" class="fadeIn second" name="5" placeholder="Numéro de Matricule">
-      
-      Code client <input type="text" id="password" class="fadeIn third" name="6" placeholder="Donner le code du Client">
-      
-      <p>
+
       <input type="submit" class="fadeIn fourth" name="upload">
       </p>
     </form>

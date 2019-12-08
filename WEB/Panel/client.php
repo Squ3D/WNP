@@ -1,6 +1,7 @@
 <?php
-  session_start();
+session_start();
   require_once "config.php";
+  require_once 'insert.php';
   
   //Utiliser l'extract $POST
   $numFiche = $_POST['1'];
@@ -14,8 +15,9 @@
     
   $query = $conn->prepare("INSERT INTO Intervention (Numero_Fiche, adresse, date_visite, heure_visite,Num_Matricule, Code_Client)
       VALUES ($numFiche, $adresse, $date_visite,$heure_visite,$Matricule,$code_Client)");
-      
        $query->execute();
+     }else {
+         echo 'fail during execution';
      }
   ?>
 
@@ -75,10 +77,10 @@ li a:hover {
 <p>Heures      <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"></p>
 <p>Matric      <input type="text" id="login" class="fadeIn second" name="5" placeholder="Renseigner Numéro de Matricule"></p>
 <p>Cclient      <input type="text" id="password" class="fadeIn third" name="6" placeholder="Renseigner le code Client"></p>
-<p><input type="Date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"></p>
+<p><input type="text" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"></p>
       
 
-      <input type="submit" class="fadeIn fourth" name="upload">
+      <a href="./insert.php"><input type="submit" class="fadeIn fourth" name="upload"></a>
       </p>
     </form>
 

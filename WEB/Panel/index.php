@@ -1,10 +1,14 @@
 <?php
 session_start();
 require_once "config.php";
+
+//FOR TESTING PURPOSES ONLY !
     
     if (isset($_SESSION['Matricule'])) {
         echo "Bienvenue : ", $_SESSION['Matricule'], "<br />";
 }
+
+
 ?>
 
 <style>
@@ -50,7 +54,8 @@ li a:hover {
   
       
       <div id="welcome">
-      <center><h1>Bienvenue sur la page d'administration</h1></center>
+      <center><h1>Bienvenue sur la page d'administration <?php echo "Matricule :", $_SESSION['Matricule'], "<br />";?></h1></center>
+      
       </div>
       
   </body>

@@ -18,3 +18,8 @@ Groupe :
   
 - Partie 2 : Client lourd (Java) Répertoire : Client
 - Partie 3 : Application Mobile (java android) Répertoire : Appli
+
+Lien démo : https://www.naimo.me/CASHCASH/
+
+user : 1
+password : test

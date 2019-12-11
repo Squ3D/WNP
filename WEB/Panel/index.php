@@ -21,8 +21,20 @@ $data = $sql->fetchColumn();
 $sql1 = $conn->query("SELECT Nom FROM employe WHERE Num_Matricule='$temp'");
 $dato = $sql1->fetchColumn();
 
-       
-  
+try {
+$sqlu = $conn->query("SELECT * FROM `Contrat_Maintenance`");
+while ($donnees = $sqlu->fetch())
+{
+    echo "test success";
+ 
+     
+}
+$sqlu->closeCursor();
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}
 }
 ?>
 
@@ -51,6 +63,16 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+#box {
+    text-align : center;
+    margin left : auto;
+    margin right : auto;
+    margin top : 60px;
+    background-color : white;
+    opacity : 0.8;
+    color : black;
+}
 </style>
 <header><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     
@@ -78,6 +100,36 @@ li a:hover {
       
       <p><h2>Vous trouvrez les échéances des contrats sur cette page</h2></p>
       
+      
+      <div id ="box">
+          <?php 
+          
+          try {
+$sqlu = $conn->query("SELECT * FROM `Contrat_Maintenance`");
+while ($donnees = $sqlu->fetch())
+{
+    //On affiche l'id et le nom du client en cours
+    echo "<table>";
+    echo "</TR>";
+    echo "<TH>Numero de contrat :","$donnees[NumerodeContrat] </TH>";
+    echo "<TH>Date Signature :","$donnees[dateSignature] </TH>";
+    echo "<TH>Date Echeance","$donnees[dateEcheance] </TH>";
+    echo "<TH>Date Renouve :","$donnees[Date_Renouvellement] </TH>";
+    echo "<TH>Code Client :"," $donnees[Code_Client] </TH>";
+    echo "<TH>Type Contrat:","$donnees[RefTypeContrat] </TH>";
+    echo "</TR>";
+    echo "</table>";
+ 
+     
+}
+$sqlu->closeCursor();
+}
+catch(Exception $e)
+{
+    die('Erreur : '.$e->getMessage());
+}?>
+          
+      </div>
       </div>
       
   </body>

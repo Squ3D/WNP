@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 11 déc. 2019 à 19:50
+-- Généré le :  mer. 11 déc. 2019 à 23:12
 -- Version du serveur :  5.7.28
 -- Version de PHP :  7.3.6
 
@@ -84,7 +84,8 @@ CREATE TABLE `Client` (
 --
 
 INSERT INTO `Client` (`Code_Client`, `Raison`, `Siren`, `Ape`, `Adresse`, `Num_tel`, `Email`, `IdAgence`) VALUES
-(1, 'Ziiodujd', 'dkdkd', 'kdkdkd', 'kdkdkd', 'kdkdkd', 'kdkddk', 1);
+(1, 'Ziiodujd', 'dkdkd', 'kdkdkd', 'kdkdkd', 'kdkdkd', 'kdkddk', 1),
+(2, 'Perrine ', 'Perrine', 'francois', 'francois', 'francois', 'francois', 1);
 
 -- --------------------------------------------------------
 
@@ -94,12 +95,20 @@ INSERT INTO `Client` (`Code_Client`, `Raison`, `Siren`, `Ape`, `Adresse`, `Num_t
 
 CREATE TABLE `Contrat_Maintenance` (
   `NumerodeContrat` int(11) NOT NULL,
-  `dateSignature` varchar(50) NOT NULL,
-  `dateEcheance` varchar(50) NOT NULL,
-  `Date_Renouvellement` varchar(50) NOT NULL,
+  `dateSignature` date NOT NULL,
+  `dateEcheance` date NOT NULL,
+  `Date_Renouvellement` date NOT NULL,
   `Code_Client` int(11) NOT NULL,
   `RefTypeContrat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `Contrat_Maintenance`
+--
+
+INSERT INTO `Contrat_Maintenance` (`NumerodeContrat`, `dateSignature`, `dateEcheance`, `Date_Renouvellement`, `Code_Client`, `RefTypeContrat`) VALUES
+(1, '2019-12-01', '2019-12-12', '2019-12-12', 1, 1),
+(2, '2019-12-24', '2019-12-19', '2019-12-25', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -245,6 +254,14 @@ CREATE TABLE `TypeContrat` (
   `TauxApplicable` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `TypeContrat`
+--
+
+INSERT INTO `TypeContrat` (`RefTypeContrat`, `Detailintervention`, `TauxApplicable`) VALUES
+(1, 'j\'ai manger des chips frérot', '1%'),
+(2, 'Sauvetage d\'un chat', '3%');
+
 -- --------------------------------------------------------
 
 --
@@ -366,7 +383,7 @@ ALTER TABLE `Famille_de_produit`
 -- AUTO_INCREMENT pour la table `TypeContrat`
 --
 ALTER TABLE `TypeContrat`
-  MODIFY `RefTypeContrat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `RefTypeContrat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Contraintes pour les tables déchargées

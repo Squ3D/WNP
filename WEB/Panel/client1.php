@@ -2,22 +2,21 @@
 session_start();
   require_once "config.php";
   
-  //Utiliser l'extract $POST
-  $numFiche = $_POST['1'];
-  $adresse = $_POST['2'];
-  $date_visite = $_POST['3'];
-  $heure_visite = $_POST['4'];
-  $Matricule = $_POST['5'];
-  $code_Client = $_POST['6'];
-
-     if (isset($_POST['upload'])) {
-    
-  $query = $conn->prepare("INSERT INTO Intervention (Numero_Fiche, adresse, date_visite, heure_visite,Num_Matricule, Code_Client)
-      VALUES ($numFiche, $adresse, $date_visite,$heure_visite,$Matricule,$code_Client)");
+   $numFiche = $_POST['1'];
+   $adresse = $POST['1'];
+   
+   
+  
+        if (isset($_POST['wata'])) {
+            
+              $query = $conn->prepare("INSERT INTO Intervention (Numero_Fiche, adresse)
+      VALUES ('$numfiche','$adresse'");
        $query->execute();
-     }else {
-         echo 'fail during execution';
-     }
+       echo "c passé";
+       
+        }
+       
+     
   ?>
 
 <style>
@@ -68,7 +67,7 @@ li a:hover {
     <center><h1>Création Intervention</h1></center>
       
       <div id="box">
-          <form name ="watka" method="post">
+          <form name ="walta" method="post">
               
     
 <p>Numéro      <input type="text" id="login" class="fadeIn second" name="1" placeholder="Renseigner le numéro de fiche" size="200"></p>
@@ -76,7 +75,7 @@ li a:hover {
 <p>Heures      <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"></p>
 <p>Matric      <input type="text" id="login" class="fadeIn second" name="5" placeholder="Renseigner Numéro de Matricule"></p>
 <p>Cclient      <input type="text" id="password" class="fadeIn third" name="6" placeholder="Renseigner le code Client"></p>
-<p><input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"></p>
+<p><input type="text" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"></p>
       
 
       <input name="wata" method ="post" type="submit" class="fadeIn fourth"></a>

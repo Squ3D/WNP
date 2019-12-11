@@ -1,5 +1,4 @@
 <?php
-
 session_start();
   
   require_once "config.php";
@@ -12,8 +11,7 @@ $query->execute();
 $count = $query->fetchColumn();    
 if ($count=="1"){
     $_SESSION['Matricule'] = $Matricule;
-    $_Nom['Nom'] = $Nom;
-    echo '<meta http-equiv="refresh" content="1;URL=./Panel/index.php">';
+    echo '<meta http-equiv="refresh" content="0;URL=./Panel/index.php">';
 }else {
     if($count != "1") {
     echo "<p>";

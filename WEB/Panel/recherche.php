@@ -2,28 +2,6 @@
 session_start();
 require_once "config.php";
 
-if(empty($_SESSION))
-{
-   echo '<meta http-equiv="refresh" content="0;URL=./kicked.php">';
-}
-
-//FOR TESTING PURPOSES ONLY !
-    
-    else if (isset($_SESSION['Matricule'])) {
-        
-        $nom = $_GET['Nom'];
-        $prenom = $_GET['Prenom'];
-        $temp = $_SESSION['Matricule'];
-
-$sql = $conn->query("SELECT Prenom FROM employe WHERE Num_Matricule='$temp'");
-$data = $sql->fetchColumn();
-
-$sql1 = $conn->query("SELECT Nom FROM employe WHERE Num_Matricule='$temp'");
-$dato = $sql1->fetchColumn();
-
-       
-  
-}
 ?>
 
 <style>
@@ -51,16 +29,19 @@ li a {
 li a:hover {
   background-color: #111;
 }
+
+#box {
+    text-align : center;
+    margin left : auto;
+    margin right : auto;
+}
 </style>
-<header><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
-    
+<header>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="https://www.naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
-</header>
 
-
-<body>
 <div id="navbar"> 
   <ul> 
 	<li><a href="./client.php">Fiche Client</a></a></li> 
@@ -70,21 +51,21 @@ li a:hover {
 	<li><a href="https://www.naimo.me/CASHCASH/logout.php" value="deco">Déconnexion</a></li>
   </ul> 
   
-      
-  
-      
-      <div id="welcome">
-      <center><h1>Bienvenue sur la page d'administration <?php echo $dato;?>  <?php echo $data;?></h1></center>
-      
-      <p><h2>Vous trouvrez les échéances des contrats sur cette page</h2></p>
-      
-      </div>
-      
-  </body>
-</div> 
-<footer>
+  </div>
+</header>
+
+
+<body>
+    <div id="box">
+      <form name ="watka" method="post">
+              
     
-</footer>
+<input type="text" id="login" class="fadeIn second" name="1" placeholder="Renseigner le numéro de fiche" size="100"></p>
 
-</html>
+      
 
+      <input name="wata" method ="post" type="submit" class="fadeIn fourth"></a>
+      </p>
+    </form>
+</div>
+</body>

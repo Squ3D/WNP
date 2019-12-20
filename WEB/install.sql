@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  mer. 11 déc. 2019 à 23:12
+-- Généré le :  ven. 20 déc. 2019 à 22:21
 -- Version du serveur :  5.7.28
 -- Version de PHP :  7.3.6
 
@@ -44,7 +44,10 @@ CREATE TABLE `agence` (
 --
 
 INSERT INTO `agence` (`IdAgence`, `Nom`, `Libelle`, `Adresse`, `Telephone`, `Mail`, `Telephone2`, `Code_Region`) VALUES
-(1, 'Naidkkd', 'kdkdk', 'kdkdk', 'kdkdk', 'kkdkd', 'kdkd', 0);
+(1, 'Agence 1', 'Agence 1', '6 Rue des agences', '0320490688', 'agence1@cashcash.fr', '', 0),
+(2, 'Agence 2', 'Agence 2', '', '', '', '', 1),
+(3, 'Agence 3', 'Agence 3', '', '', '', '', 4),
+(4, 'Agence 4', 'Agence 4', '', '', '', '', 10);
 
 -- --------------------------------------------------------
 
@@ -61,6 +64,13 @@ CREATE TABLE `Assistant_Telephonique` (
   `password` varchar(50) NOT NULL,
   `Code_Region` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `Assistant_Telephonique`
+--
+
+INSERT INTO `Assistant_Telephonique` (`Num_Matricule`, `Nom`, `Prenom`, `adresse`, `dateembauche`, `password`, `Code_Region`) VALUES
+(3, 'François', 'Perrine', '', '', '', 8);
 
 -- --------------------------------------------------------
 
@@ -84,8 +94,9 @@ CREATE TABLE `Client` (
 --
 
 INSERT INTO `Client` (`Code_Client`, `Raison`, `Siren`, `Ape`, `Adresse`, `Num_tel`, `Email`, `IdAgence`) VALUES
-(1, 'Ziiodujd', 'dkdkd', 'kdkdkd', 'kdkdkd', 'kdkdkd', 'kdkddk', 1),
-(2, 'Perrine ', 'Perrine', 'francois', 'francois', 'francois', 'francois', 1);
+(1, 'Robert Rochefort', '524454', '4454', '6 rue clients', '06000000', 'client1@raison.fr', 1),
+(2, 'Perrine Francois', '4545454', '45454545', '', '', '', 2),
+(3, 'Gilles Delatourette', '445454', '4545454', '', '', '', 2);
 
 -- --------------------------------------------------------
 
@@ -144,7 +155,8 @@ CREATE TABLE `employe` (
 
 INSERT INTO `employe` (`Num_Matricule`, `Nom`, `Prenom`, `adresse`, `dateembauche`, `password`) VALUES
 (1, 'Gallouj', 'Naim', '7 chemin de traverse', '3/01/12', 'test'),
-(2, 'Billet', 'Wendy', '6 rue des cranes', '12/01/1196', 'test');
+(2, 'Billet', 'Wendy', '6 rue des cranes', '12/01/1196', 'test'),
+(3, 'François', 'Perrine', '', '', 'test');
 
 -- --------------------------------------------------------
 
@@ -156,6 +168,16 @@ CREATE TABLE `Famille_de_produit` (
   `code_famille` int(11) NOT NULL,
   `libelle` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `Famille_de_produit`
+--
+
+INSERT INTO `Famille_de_produit` (`code_famille`, `libelle`) VALUES
+(1, 'Serveur'),
+(2, 'Ordinateur'),
+(3, 'Imprimante'),
+(4, 'Périphérique');
 
 -- --------------------------------------------------------
 
@@ -177,9 +199,7 @@ CREATE TABLE `Intervention` (
 --
 
 INSERT INTO `Intervention` (`Numero_Fiche`, `adresse`, `date_visite`, `heure_visite`, `Num_Matricule`, `Code_Client`) VALUES
-(1, 'issou', '2022-03-20', '2', 1, 1),
-(2, 'lol', NULL, NULL, NULL, NULL),
-(3, 'lul', NULL, NULL, NULL, NULL);
+(1, '6 rue test', '2019-12-20', '2', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -214,7 +234,17 @@ CREATE TABLE `Region` (
 --
 
 INSERT INTO `Region` (`Code_Region`, `Libelle`) VALUES
-(0, 'Nord pas de kalé');
+(0, 'Haut de France'),
+(1, 'Grand Est'),
+(2, 'Nouvelle-Aquitaine'),
+(3, 'Auvergne-Rhône-Alpes'),
+(4, 'Bourgogne-Franche-Comté '),
+(5, 'Bretagne'),
+(6, 'Centre-Val de Loire'),
+(7, 'Corse '),
+(8, 'Hauts-de-France'),
+(9, 'Île-de-France'),
+(10, 'Occitanie');
 
 -- --------------------------------------------------------
 
@@ -240,7 +270,8 @@ CREATE TABLE `Technicien` (
 --
 
 INSERT INTO `Technicien` (`Num_Matricule`, `Telephone_Mobile`, `Qualification`, `adresse`, `Nom`, `Prenom`, `adresse_employe`, `dateembauche`, `password`, `IdAgence`) VALUES
-(1, '0787960391', 'Ingénieur Cyber Sécurité', '6 rue louis montois', 'Gallouj', 'Naïm', '6 rue louis montois ', '1/01/2022', 'test', 1);
+(1, '060000000', 'BTS Sio Slam', '6 rue jules vernes', 'Gallouj', 'Naïm', '6 rue jules vernes', '1/01/2022', 'test', 1),
+(2, '060000000', 'BTS sio', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -259,8 +290,9 @@ CREATE TABLE `TypeContrat` (
 --
 
 INSERT INTO `TypeContrat` (`RefTypeContrat`, `Detailintervention`, `TauxApplicable`) VALUES
-(1, 'j\'ai manger des chips frérot', '1%'),
-(2, 'Sauvetage d\'un chat', '3%');
+(1, 'Matériel defectueux', '10%'),
+(2, 'Matériel cassé par le client', '10%'),
+(3, 'Opération de Maintenance', '10%');
 
 -- --------------------------------------------------------
 
@@ -273,6 +305,16 @@ CREATE TABLE `TypeMateriel` (
   `Libelle` varchar(50) NOT NULL,
   `code_famille` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `TypeMateriel`
+--
+
+INSERT INTO `TypeMateriel` (`Ref`, `Libelle`, `code_famille`) VALUES
+(1, 'Souris Logitech S', 4),
+(2, 'Serveur ProSec IBM', 1),
+(3, 'Ecran Ilyama Prolite 27\'', 4),
+(4, 'Hp Zbook 15UG3', 2);
 
 --
 -- Index pour les tables déchargées
@@ -377,13 +419,13 @@ ALTER TABLE `TypeMateriel`
 -- AUTO_INCREMENT pour la table `Famille_de_produit`
 --
 ALTER TABLE `Famille_de_produit`
-  MODIFY `code_famille` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `code_famille` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `TypeContrat`
 --
 ALTER TABLE `TypeContrat`
-  MODIFY `RefTypeContrat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `RefTypeContrat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Contraintes pour les tables déchargées

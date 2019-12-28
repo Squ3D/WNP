@@ -8,7 +8,7 @@ session_start();
 $query = $conn->prepare("SELECT COUNT(*) FROM employe WHERE password ='$password' AND Num_Matricule ='$Matricule' ");
 
 $query->execute();
-$count = $query->fetchColumn();    
+$count = $query->fetchColumn();   
 if ($count=="1"){
     $_SESSION['Matricule'] = $Matricule;
     echo '<meta http-equiv="refresh" content="0;URL=./Panel/index.php">';

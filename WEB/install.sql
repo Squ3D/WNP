@@ -65,7 +65,8 @@ CREATE TABLE employe(
         Prenom        Varchar (50) NOT NULL ,
         adresse       Varchar (50) NOT NULL ,
         dateembauche  Varchar (200) NOT NULL ,
-        password      Varchar (50) NOT NULL
+        password      Varchar (50) NOT NULL,
+        role          Int NOT NULL DEFAULT 0
 	,CONSTRAINT employe_PK PRIMARY KEY (Num_Matricule)
 )ENGINE=InnoDB;
 

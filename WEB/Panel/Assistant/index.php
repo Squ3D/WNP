@@ -1,3 +1,31 @@
+<style>
+  table {
+border: medium solid #6495ed;
+border-collapse: collapse;
+width:50%;
+display:inline-block;
+}
+th {
+font-family: monospace;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+background-color: #D0E3FA;
+
+}
+td {
+font-family: sans-serif;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;
+
+}
+caption {
+font-family: sans-serif;
+}</style>
+
 <?php
 session_start();
 
@@ -68,7 +96,7 @@ elseif (
         margin left: auto;
         margin right: auto;
         margin top: 60px;
-        background-color: white;
+        background-color: transparent;
         opacity: 0.8;
         color: black;
     }

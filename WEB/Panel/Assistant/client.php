@@ -1,9 +1,17 @@
 <?php
 session_start();
 require_once "../../config.php";
+require_once "../../@scripts/Affichage.php";
 
 //Utiliser l'extract $POST
 
+$sqlRequest = $conn->query("SELECT Num_Matricule FROM Technicien");
+$sqlRequest->setFetchMode(PDO::FETCH_ASSOC);
+$techniciens = $sqlRequest->fetchAll();
+
+$sqlRequest = $conn->query("SELECT Code_Client FROM Client");
+$sqlRequest->setFetchMode(PDO::FETCH_ASSOC);
+$clients = $sqlRequest->fetchAll();
 
 if (isset($_POST['create'])) {
     // vérifier que tous les champs soient saisis
@@ -88,12 +96,31 @@ if (isset($_POST['create'])) {
                required>
         <br>
         <label>Matric</label>
-        <input type="number" id="login" class="fadeIn second" name="5" placeholder="Renseigner Numéro de Matricule"
-               required>
+        <?php
+        // Pour chaque techniciens
+        //            foreach ($techniciens as $technicien) {
+        //                // Pour chaque données du technicien
+        //                foreach ($technicien as $valeurDelaColonne) {
+        //                    // On affiche la valeur de la colonne
+        //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
+        //                }
+        //            }
+
+        Affichage::afficherCleEtrangeres($techniciens, "5");
+        ?>
+
         <br>
+
         <label>Cclient</label>
-        <input type="number" id="password" class="fadeIn third" name="6" placeholder="Renseigner le code Client"
-               required>
+        <?php
+        //            foreach ($clients as $client) {
+        //                foreach ($client as $valeurDelaColonne) {
+        //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
+        //                }
+        //            }
+
+        Affichage::afficherCleEtrangeres($clients, "6");
+        ?>
         <br>
         <label>Date</label>
         <input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"

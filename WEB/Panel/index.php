@@ -41,11 +41,14 @@ elseif (isset($_SESSION['Matricule'])) {
             echo "test success";
 
 
+
         }
         $sqlu->closeCursor();
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
+
+
 }
 ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

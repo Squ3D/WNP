@@ -1,7 +1,6 @@
 # WNP
 
-Projet PPE BTS SIO option : SLAM
-
+Projet PPE
 
 Groupe :
 - Wendy Billet

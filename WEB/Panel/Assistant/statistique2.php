@@ -28,16 +28,17 @@ session_start();
     li a:hover {
         background-color: #111;
     }
-/*
-    #box {
-        text-align: center;
-        margin left: auto;
-        margin right: auto;
-        margin top: 60px;
 
-        opacity: 0.8;
-        color: black;
-    }*/
+    /*
+        #box {
+            text-align: center;
+            margin left: auto;
+            margin right: auto;
+            margin top: 60px;
+
+            opacity: 0.8;
+            color: black;
+        }*/
 </style>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -62,72 +63,76 @@ session_start();
     <div id="stat">
 
 
-<?php
+        <?php
 
-if (
-    isset ($_POST["search"])
-    && isset ($_POST["date-min"])
-    && isset ($_POST["date-max"])
-) {
-    $nomDuTechnicien = $_POST["search"];
-    $dateVisiteMin = $_POST["date-min"];
-    $dateVisiteMax = $_POST["date-max"];
+        if (
+            isset ($_POST["search"])
+            && isset ($_POST["date-min"])
+            && isset ($_POST["date-max"])
+        ) {
+            $nomDuTechnicien = $_POST["search"];
+            $dateVisiteMin = $_POST["date-min"];
+            $dateVisiteMax = $_POST["date-max"];
 
 
-    try {
-        $sqlRequest = $conn->query("
+            try {
+                $sqlRequest = $conn->query("
             
-            SELECT COUNT(Controller.Numero_Fiche), SUM(Controller.temps_passe), MONTH(date_visite)
+            SELECT COUNT(Controller.Numero_Fiche), SUM(Controller.temps_passe), MONTH(date_visite),TM.Libelle
             FROM Controller
             JOIN Intervention I on Controller.Numero_Fiche = I.Numero_Fiche
             JOIN employe e on I.Num_Matricule = e.Num_Matricule
+             JOIN Materiel M on Controller.NumSerie = M.NumSerie
+             JOIN TypeMateriel TM on M.Ref = TM.Ref
+
             WHERE e.Nom LIKE '%" . $nomDuTechnicien . "%'
             AND date_visite >= '" . $dateVisiteMin . "'
             AND date_visite <= '" . $dateVisiteMax . "'
 ");
 
-        $sqlRequest->setFetchMode(PDO::FETCH_ASSOC);
-        $techniciens = $sqlRequest->fetchAll();
+                $sqlRequest->setFetchMode(PDO::FETCH_ASSOC);
+                $techniciens = $sqlRequest->fetchAll();
 
-        if (empty($techniciens)) {
-            -
-            die ("Aucun résultat.");
-        }
+                if (empty($techniciens)) {
+                    -
+                    die ("Aucun résultat.");
+                }
 
-        echo ' <div id="box"> <table border="1px">';
+                echo ' <div id="box"> <table border="1px">';
 
-        // On créé les entêtes correspondantes aux colonnes
-        // pour le nombre d'intervention, la durée totale des intervention et le mois sélectionné
+                // On créé les entêtes correspondantes aux colonnes
+                // pour le nombre d'intervention, la durée totale des intervention et le mois sélectionné
 
-        echo "<th> Nombre d'interventions </th>";
-        echo "<th> Durée totale des interventions</th>";
-        echo "<th> Mois des interventions</th>";
+                echo "<th> Nombre d'interventions </th>";
+                echo "<th> Durée totale des interventions</th>";
+                echo "<th> Mois des interventions</th>";
+                echo "<th> Matériel</th>";
 
 
-        // Pour chaque techniciens
-        foreach ($techniciens as $technicien) {
-            // On passe à la prochaine ligne du tableau
-            echo "<tr>";
-            // Pour chaque données du technicien
-            foreach ($technicien as $valeurDelaColonne) {
-                // On affiche la valeur de la colonne
-                echo "<td>$valeurDelaColonne</td>";
+                // Pour chaque techniciens
+                foreach ($techniciens as $technicien) {
+                    // On passe à la prochaine ligne du tableau
+                    echo "<tr>";
+                    // Pour chaque données du technicien
+                    foreach ($technicien as $valeurDelaColonne) {
+                        // On affiche la valeur de la colonne
+                        echo "<td>$valeurDelaColonne</td>";
+                    }
+                    echo "</tr>";
+                }
+
+                echo "</table></div></div>";
+
+                $sqlRequest->closeCursor();
+            } catch (Exception $exception) {
+                die('Erreur : ' . $exception->getMessage());
             }
-            echo "</tr>";
+        } else {
+            echo "Erreur lors de la recherche.";
         }
+        ?>
 
-        echo "</table></div></div>";
-
-        $sqlRequest->closeCursor();
-    } catch (Exception $exception) {
-        die('Erreur : ' . $exception->getMessage());
-    }
-} else {
-    echo "Erreur lors de la recherche.";
-}
-?>
-
-   </div>
+    </div>
 
 </body>
 </div>

@@ -83,7 +83,7 @@ else if (isset($_SESSION['Matricule'])) {
     try {
     $reponse = $conn->query('SELECT Numero_Fiche, adresse, date_visite, heure_visite, Code_Client
     FROM Intervention
-    WHERE date_visite = CURDATE() AND  Num_Matricule =3');
+    WHERE date_visite = CURDATE() AND  Num_Matricule = ' .$temp);
 
 
     $reponse->setFetchMode(PDO::FETCH_ASSOC);

@@ -12,25 +12,8 @@ else if (isset($_SESSION['Matricule'])) {
 //    $prenom = $_GET['Prenom'];
     $temp = $_SESSION['Matricule'];
 
-    $sql = $conn->query("SELECT Prenom FROM employe WHERE Num_Matricule='$temp'");
-    $data = $sql->fetchColumn();
 
-    $sql1 = $conn->query("SELECT Nom FROM employe WHERE Num_Matricule='$temp'");
-    $dato = $sql1->fetchColumn();
-
-    try {
-        $sqlu = $conn->query("SELECT * FROM `Contrat_Maintenance`");
-        while ($donnees = $sqlu->fetch()) {
-            echo "test success";
-
-
-        }
-        $sqlu->closeCursor();
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
-}
-?>
+   ?>
 
 <style>
     ul {
@@ -66,8 +49,16 @@ else if (isset($_SESSION['Matricule'])) {
         background-color: white;
         opacity: 0.8;
         color: black;
+
+
+    #stat
+    {
+        margin left: auto;
+        margin right: auto;
+        margin top: 60px;
     }
 </style>
+<html>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -87,44 +78,55 @@ else if (isset($_SESSION['Matricule'])) {
         <li><a href="https://www.naimo.me/CASHCASH/logout.php" value="deco">Déconnexion</a></li>
     </ul>
 
+<?php
 
-    <div id="welcome">
-        <center><h1>Bienvenue sur la page d'administration <?php echo $dato; ?>  <?php echo $data; ?></h1></center>
-
-        <p>
-        <h2>Vous trouvrez les échéances des contrats sur cette page</h2></p>
-
-
-        <div id="box">
-            <?php
-
-            try {
-                $sqlu = $conn->query("SELECT * FROM `Contrat_Maintenance`");
-                while ($donnees = $sqlu->fetch()) {
-                    //On affiche l'id et le nom du client en cours
-                    echo "<table>";
-                    echo "</TR>";
-                    echo "<TH>Numero de contrat :", "$donnees[NumerodeContrat] </TH>";
-                    echo "<TH>Date Signature :", "$donnees[dateSignature] </TH>";
-                    echo "<TH>Date Echeance", "$donnees[dateEcheance] </TH>";
-                    echo "<TH>Date Renouve :", "$donnees[Date_Renouvellement] </TH>";
-                    echo "<TH>Code Client :", " $donnees[Code_Client] </TH>";
-                    echo "<TH>Type Contrat:", "$donnees[RefTypeContrat] </TH>";
-                    echo "</TR>";
-                    echo "</table>";
+    try {
+    $reponse = $conn->query('SELECT Numero_Fiche, adresse, date_visite, heure_visite, Code_Client
+    FROM Intervention
+    WHERE date_visite = CURDATE() AND  Num_Matricule =3');
 
 
+    $reponse->setFetchMode(PDO::FETCH_ASSOC);
+    $intervention = $reponse->fetchAll();
+
+    echo ' <div id="box"> <table border="1px">';
+
+            // On créé les entêtes correspondantes aux colonnes
+            // pour le nombre d'intervention, la durée totale des intervention et le mois sélectionné
+
+            echo "<th> Numero de fiche </th>";
+            echo "<th> Adresse</th>";
+            echo "<th> Date</th>";
+            echo "<th> Heure</th>";
+            echo "<th> Nom client </th>";
+
+
+            // Pour chaque intervention
+            foreach ($intervention as $intervention) {
+            // On passe à la prochaine ligne du tableau
+            echo "<tr>";
+                // Pour chaque données des intervention
+                foreach ($intervention as $valeurDelaColonne) {
+                // On affiche la valeur de la colonne
+                echo "<td>$valeurDelaColonne</td>";
                 }
-                $sqlu->closeCursor();
-            } catch (Exception $e) {
-                die('Erreur : ' . $e->getMessage());
-            } ?>
+                echo "</tr>";
+            }
 
-        </div>
-    </div>
+
+            echo "</table></div></div>";
+
+
+$reponse->closeCursor();
+} catch (Exception $exception) {
+die('Erreur : ' . $exception->getMessage());
+}
+} else {
+echo "Erreur lors de la recherche.";
+}
+?>
 
 </body>
-</div>
 <footer>
 
 </footer>

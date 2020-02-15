@@ -7,41 +7,8 @@ if (empty($_SESSION)) {
 
 
 ?>
-
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    /* Change the link color to #111 (black) on hover */
-    li a:hover {
-        background-color: #111;
-    }
-
-    #box {
-        text-align: center;
-        margin left: auto;
-        margin right: auto;
-    }
-</style>
 <header>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <link href="../CSS/style.css" rel="stylesheet">
 
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

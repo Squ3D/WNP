@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../config.php";
+require_once "..\config.php";
 
 if (empty($_SESSION)) {
     //Redirige si tentative de Scan ou accées au fichiers
@@ -52,5 +52,5 @@ elseif (isset($_SESSION['Matricule'])) {
 }
 ?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="https://naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
+<link href="../CSS/style.css" rel="stylesheet">
 <title>Login</title>

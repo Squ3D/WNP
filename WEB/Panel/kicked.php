@@ -3,7 +3,7 @@
 
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://www.naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
+<link href="../CSS/style.css" rel="stylesheet">
 </header>
 
 

@@ -7,45 +7,29 @@ if (empty($_SESSION)) {
 
 
 ?>
+<style> 
+#cocaina {
+    width: 230px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
+#butcocaina {
+    width: 230px;
+    height: 30px;
+    margin-top: 70px;
+    margin-left: 43%;
+    margin-right: auto;
 
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    /* Change the link color to #111 (black) on hover */
-    li a:hover {
-        background-color: #111;
-    }
-
-    #box {
-        text-align: center;
-        margin left: auto;
-        margin right: auto;
-    }
+}
 </style>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://www.naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
+    <link href="../../CSS/style.css" rel="stylesheet">
 
     <div id="navbar">
         <ul>
@@ -61,10 +45,12 @@ if (empty($_SESSION)) {
 
 
 <body>
-<div id="box">
+<div id="cocaina">
+    
     <form action="search.php" method="GET">
-        <input type="text" name="query"/>
-        <input type="submit" value="Search"/>
+       <p><strong>ENTRER NUMERO CLIENT : </strong><input type="text" name="query"/></p></div>
+        <div id="butcocaina"><input type="submit" value="Search"/></div>
+        
     </form>
-</div>
+
 </body>

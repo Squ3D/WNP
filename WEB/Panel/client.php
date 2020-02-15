@@ -20,41 +20,8 @@ if (isset($_POST['upload'])) {
 }
 ?>
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-
-    li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    /* Change the link color to #111 (black) on hover */
-    li a:hover {
-        background-color: #111;
-    }
-
-    #box {
-        text-align: center;
-        margin left: auto;
-        margin right: auto;
-    }
-</style>
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="https://www.naimo.me/CASHCASH/CSS/style.css" rel="stylesheet">
+<link href="../CSS/style.css" rel="stylesheet">
 
 <ul>
     <li><a href="./client.php">Fiche Client</a></a></li>

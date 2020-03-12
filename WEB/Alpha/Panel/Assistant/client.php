@@ -74,12 +74,14 @@ if (isset($_POST['create'])) {
     <li><a href="./client.php">Fiche Client</a></a></li>
     <li><a href="./intervention.php">Intervention</a></a></li>
     <li><a href="./statistique.php">Statistique</a></li>
-    <li><a href="https://www.naimo.me/CASHCASH/logout.php" value="deco">Déconnexion</a></li>
+    <li><a href="kicked.php" value="deco">Déconnexion</a></li>
 </ul>
 
 
 <body background-color : blue>
-<center><h1>Création Intervention</h1></center>
+<p><font color="transparent">&nbsp</font></p>
+<p><font color="transparent">&nbsp</font></p>
+<center><h1 class="hab"><font color="black">Création Intervention</font></h1></center>
 
 <div id="box">
     <form name="watka" method="post">

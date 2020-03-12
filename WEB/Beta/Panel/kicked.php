@@ -9,3 +9,5 @@
 
 <p>
 <center><h1>Vous tentez d'accéder à un espace protégé</center></h1></p>
+<center><h3>Veuillez vous authentifier  en cliquant <a href="../index.php">ici</a></center></h3></p>
+

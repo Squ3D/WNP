@@ -5,7 +5,12 @@ a {
     text-decoration: none;
     font-weight: 400;
 }
+h1 {
 
+    color:black;
+
+
+   }
 h2 {
     text-align: center;
     font-size: 16px;
@@ -20,7 +25,7 @@ h2 {
 /* STRUCTURE */
 
 body {
-    background: #639ac2;;
+    background: #f6f6f6;
 }
 
 .wrapper {

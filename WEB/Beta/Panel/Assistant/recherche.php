@@ -7,12 +7,9 @@ if (empty($_SESSION)) {
 
 
 ?>
-
-
-
-<!--
-contact form created for treehouse competition.
--->
+<head>
+    <link rel="stylesheet" href="../../CSS/form.css"/>
+</head>
 
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -21,34 +18,44 @@ contact form created for treehouse competition.
 </header>
 
 
-
-
-
-
-
 <body>
 
-    <form action="search.php" method="POST">
-        <input type="text" name="query"  placeholder=" Numéro client Ex : 1" size="30" maxlength="10"/>
-        <input type="submit" value="Search"/>
-  </form>
-</div>
+<form>
+    <div class="container">
+        <div class="head">
+            <h2>Recherche</h2>
+        </div>
 
-<div id="box2">
-    <form action="searchNumTech.php" method="GET">
-        <input type="text" name="queryFiche"  placeholder="Numéro Technicien Ex : 1214" size="30" maxlength="10"/>
-        <input type="submit" value="Search" />
-    </form>
-</div>
+        <form action="search.php" method="POST">
+            <input type="text" name="query" placeholder=" Numéro client Ex : 1" size="30" maxlength="10"/>
+            <button id="submit" type="submit">
+                Valider
+            </button>
 
-
-
-    <div id = "date1">
-        <form action="searchDate.php" method=""GET">
-        <label for="Date"> Date de la fiche</label>
-        <input type="date" id="date" name="queryDate">
-        <input type="submit" value=" Search"/>
         </form>
-    </div>
+
+        <form action="searchNumTech.php" method="GET">
+            <input type="text" name="queryFiche" placeholder="Numéro Technicien Ex : 1214" size="30" maxlength="10"/>
+            <button id="submit" type="submit">
+                Valider
+            </button>
+        </form>
+
+        <form action="searchDate.php" method="" GET
+        ">
+
+        <input type="date" id="date" name="queryDate">
+        <div class="message">Message Sent</div>
+
+        <button id="submit" type="submit"> Valider </button>
+
+
+
+
+
+        </div>
+
+</form>
+
 
 </body>

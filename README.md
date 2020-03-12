@@ -2,10 +2,7 @@
 
 Projet PPE
 
-Groupe :
-- Wendy Billet
-- Naïm Gallouj
-- Perrine François
+Dévelopeur : Wendy Billet & Naïm Gallouj
 
 - Partie 1 : Site Web Dynamique (Php,Mysql,JS). Répertoire : Web
   - Site web en PHP

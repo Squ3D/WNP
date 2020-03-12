@@ -17,7 +17,10 @@ if (isset($_POST['wata'])) {
 
 
 ?>
+<head>
 
+
+</head>
 
 <header>
 

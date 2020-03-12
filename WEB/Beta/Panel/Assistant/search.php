@@ -2,7 +2,10 @@
 session_start();
 require_once "../../config.php";
 ?>
+<head>
 
+    <link rel="stylesheet" href="../../CSS/tab.css"/>
+</head>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 

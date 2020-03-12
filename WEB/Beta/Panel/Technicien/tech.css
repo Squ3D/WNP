@@ -13,7 +13,7 @@
 
 body {
     font-family: sans-serif;
-    background: #92badd;
+    background: white;
 
     color: #777777;
 
@@ -22,7 +22,7 @@ body {
 
 
 .container {
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -144,3 +144,60 @@ fieldset {
 }
 
 
+input {
+    margin-bottom:10px;
+
+}
+textarea {
+    height:100px;
+    margin-bottom:10px;
+}
+input:first-of-type
+{
+    margin-top:5px;
+}
+input, textarea {
+    font-size: 1em;
+    padding: 15px 10px 10px;
+    font-family: 'Source Sans Pro',arial,sans-serif;
+    border: 1px solid #cecece;
+    background: #d7d7d7;
+    color:black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+}
+::-webkit-input-placeholder {
+    color: black;
+}
+:-moz-placeholder {
+    color: black;
+}
+::-moz-placeholder {
+    color: black;
+}
+:-ms-input-placeholder {
+    color: black;
+}
+
+.head {
+    margin-top:30%;
+    -webkit-border-radius:6px 6px 0px 0px;
+    -moz-border-radius:6px 6px 0px 0px;
+    border-radius:6px 6px 0px 0px;
+    background-color: #88b2d1;
+    color:#FAFAFA;
+}
+h2 {
+    text-align:center;
+    padding:18px 0 18px 0;
+    font-size: 1.4em;
+}

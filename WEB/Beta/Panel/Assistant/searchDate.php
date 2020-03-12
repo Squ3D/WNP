@@ -2,7 +2,36 @@
 session_start();
 require_once "../../config.php";
 ?>
+<head>
+    <link rel="stylesheet" href="../../CSS/tab.css"/>
+<style>table {
+        border-collapse: collapse;
+        width: 50%;
+        margin-left: 23%;
+        margin-top:5%;
+        font-family: sans-serif;
+    }
 
+    th, td {
+        text-align: left;
+        padding: 8px;
+        color:black;
+    ;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dbe1e5;
+
+
+    }
+
+    th {
+        background-color: #88b2d1;
+        opacity: 0.7;
+        color: white;
+    }</style>
+
+</head>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 

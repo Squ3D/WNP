@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab7eb794-e27e-4ee8-b84b-9612cb5a19b5" name="Default Changelist" comment="ajout modif fiche par recherche client date et tech">
-      <change afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/CSS/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/CSS/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/recherche.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/recherche.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/searchDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/searchDate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/searchNumTech.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/searchNumTech.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/statistique.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/statistique.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Assistant/statistique2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Assistant/statistique2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Technicien/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Technicien/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Technicien/menutech.css" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Technicien/menutech.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Beta/Panel/Technicien/valider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Beta/Panel/Technicien/valider.php" afterDir="false" />
-    </list>
+    <list default="true" id="ab7eb794-e27e-4ee8-b84b-9612cb5a19b5" name="Default Changelist" comment="ajout modif fiche par recherche client date et tech" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +125,7 @@
       <workItem from="1583913050391" duration="25640000" />
       <workItem from="1583941733758" duration="4539000" />
       <workItem from="1583998435499" duration="820000" />
-      <workItem from="1584000060398" duration="15990000" />
+      <workItem from="1584000060398" duration="16646000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de role, changement fichier conf si serveur ou en local">
       <created>1577801378878</created>

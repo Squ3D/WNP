@@ -111,7 +111,7 @@ require_once "../../config.php";
         color:#fff;
     }
     button:hover, .button:hover {
-        background:#19a08c;
+        background: 	#1E90FF;
     }
     label.error {
         font-family:'Source Sans Pro',arial,sans-serif;

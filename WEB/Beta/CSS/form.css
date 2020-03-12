@@ -38,7 +38,7 @@ textarea {
 }
 input:first-of-type
 {
-    margin-top:35px;
+    margin-top:25px;
 }
 input, textarea {
     font-size: 1em;
@@ -72,8 +72,8 @@ input, textarea {
     color: black;
 }
 button {
-    margin-top:15px;
-    margin-bottom:25px;
+    margin-top:5px;
+    margin-bottom:5px;
     background-color:#88b2d1;
     padding: 12px 45px;
     -ms-border-radius: 5px;

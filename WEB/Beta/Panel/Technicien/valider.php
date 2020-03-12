@@ -26,7 +26,7 @@
             <label name="field3 "> <strong> Adresse</strong> <?php echo $_GET['adresse'] ?> </label>
         </fieldset>
         <fieldset>
-            <label name="field4 "> <strong>Numéro client </strong> <?php echo $_GET['date_visite'] ?> </label>
+            <label name="field4 "> <strong>Numéro client </strong> <?php echo $_GET['Code_Client'] ?> </label>
         </fieldset>
         <fieldset>
             <label> <strong> Temps passé </strong> </label> <input type="temps" name="field5" placeholder="ex : 30 "/>

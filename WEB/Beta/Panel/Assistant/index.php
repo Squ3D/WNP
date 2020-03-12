@@ -10,19 +10,21 @@ if (empty($_SESSION)) {
 ?>
 <style>
 
+    body{
+        background-color:#e6f1f9;
+    }
     table {
         border-collapse: collapse;
         width: 50%;
         margin-left: 23%;
-        margin-top:5%;
+        margin-top: 5%;
         font-family: sans-serif;
     }
 
     th, td {
         text-align: left;
         padding: 8px;
-        color:black;
-      ;
+        color: black;;
     }
 
     tr:nth-child(even) {

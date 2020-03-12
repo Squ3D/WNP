@@ -42,9 +42,6 @@ if (isset($_POST['create'])) {
 ?>
 
 
-
-
-
 <header>
 
     <?php include("menu.php"); ?>
@@ -99,7 +96,8 @@ if (isset($_POST['create'])) {
                required>
         <br>
         <label>Distance</label>
-        <input type="text" id="password" class="fadeIn third" name="7" placeholder="Renseigner la distance depuis l'agence"
+        <input type="text" id="password" class="fadeIn third" name="7"
+               placeholder="Renseigner la distance depuis l'agence"
                required>
         <br>
 
@@ -111,8 +109,6 @@ if (isset($_POST['create'])) {
 </div>
 </body>
 
-
-      
       
       
       

@@ -9,6 +9,11 @@ if (empty($_SESSION)) {
 ?>
 
 
+
+<!--
+contact form created for treehouse competition.
+-->
+
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -16,8 +21,13 @@ if (empty($_SESSION)) {
 </header>
 
 
+
+
+
+
+
 <body>
-<div id="box">
+
     <form action="search.php" method="POST">
         <input type="text" name="query"  placeholder=" Numéro client Ex : 1" size="30" maxlength="10"/>
         <input type="submit" value="Search"/>

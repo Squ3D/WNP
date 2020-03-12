@@ -11,6 +11,9 @@ session_start();
 </header>
 
 
+
+
+
 <body>
 
 
@@ -53,7 +56,7 @@ session_start();
             $techniciens = $sqlRequest->fetchAll();
 
             if (empty($techniciens)) {
-                -
+
                 die ("Aucun résultat.");
             }
 

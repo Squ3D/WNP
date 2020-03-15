@@ -47,13 +47,13 @@ require_once "../../config.php";
 
 
     <?php
-    $query = $_GET['queryDate'];
+    $query = $_POST['queryDate'] ?? null;
     // 2020-02-01 => "2020-02-01"
-    $date = '"' . $_GET['queryDate'] . '"';
+    $date = '"' . $_POST['queryDate'] . '"';
     $sqlu = $conn->query('SELECT * FROM Intervention WHERE date_visite LIKE' . $date);
 
     while ($donnees = $sqlu->fetch()) {
-        // on affiche toutes les infos de l'intervention de la date passée dans le get
+        // on affiche toutes les infos de l'intervention de la date passée dans le post
         /* echo "<table>";
          echo "</TR>";
          echo "<TH>Numero fiche :", "$donnees[Numero_Fiche] </TH>";

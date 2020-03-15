@@ -68,15 +68,15 @@ if (isset($_POST['create'])) {
                    required>
             <br>
 
-            <input type="text" id="password" class="fadeIn third" name="2" placeholder="adresse" required>
+            <input type="text" id="password" class="fadeIn third" name="2" placeholder="Adresse" required>
             <br>
 
             <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"
                    required>
             <br>
 
-            <div class="affichage">
-                <label>Matric</label>
+            <div class="bloc1">
+
                 <?php
                 // Pour chaque techniciens
                 //            foreach ($techniciens as $technicien) {
@@ -87,22 +87,21 @@ if (isset($_POST['create'])) {
                 //                }
                 //            }
 
-                Affichage::afficherCleEtrangeres($techniciens, "5");
+                Affichage::afficherCleEtrangeres($techniciens, "5", "Techniciens");
                 ?>  </div>
 
 
-            <br>
+            <div class="bloc2">
+                <?php
+                //            foreach ($clients as $client) {
+                //                foreach ($client as $valeurDelaColonne) {
+                //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
+                //                }
+                //            }
 
-            <label>Cclient</label>
-            <?php
-            //            foreach ($clients as $client) {
-            //                foreach ($client as $valeurDelaColonne) {
-            //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
-            //                }
-            //            }
-
-            Affichage::afficherCleEtrangeres($clients, "6");
-            ?>
+                Affichage::afficherCleEtrangeres($clients, "6", "Clients");
+                ?>
+            </div>
             <br>
 
             <input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"

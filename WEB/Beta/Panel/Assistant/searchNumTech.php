@@ -8,53 +8,14 @@ require_once "../../config.php";
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <?php include("menu.php"); ?>
-
-
 </header>
-
-<style>
-
-    body{
-        background-color:#e6f1f9;
-    }
-    table {
-        border-collapse: collapse;
-        width: 50%;
-        margin-left: 23%;
-        margin-top: 5%;
-        font-family: sans-serif;
-    }
-
-    th, td {
-        text-align: left;
-        padding: 8px;
-        color: black;;
-    }
-
-    tr:nth-child(even) {
-        background-color: #dbe1e5;
-
-
-    }
-
-    th {
-        background-color: #88b2d1;
-        opacity: 0.7;
-        color: white;
-    }
-
-</style>
 <body>
-
-
 <div id="stat">
-
-
     <?php
-    $query = $_GET['queryFiche'];
+    $query = $_POST['queryFiche'] ?? null;
     // gets value sent over search form
     $sqlu = $conn->query("SELECT * FROM Intervention
-            WHERE Num_Matricule =" . $_GET['queryFiche']);
+            WHERE Num_Matricule =" . $_POST['queryFiche']);
     while ($donnees = $sqlu->fetch()) {
         // on affiche toutes les infos de l'intervention de la fiche
         echo "<table class=\"responstable\">";

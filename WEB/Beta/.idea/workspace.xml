@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/@scripts/Affichage.php" beforeDir="false" afterPath="$PROJECT_DIR$/@scripts/Affichage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/kicked.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/kicked.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/statistique.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/statistique.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Technicien/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Technicien/valider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/valider.php" afterDir="false" />
-    </list>
+    <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +48,14 @@
       <workItem from="1584106232676" duration="4418000" />
       <workItem from="1584268052306" duration="1943000" />
     </task>
+    <task id="LOCAL-00001" summary="[wen] Refactoring Panel/Assistant features">
+      <created>1584302259688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584302259688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,5 +73,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[wen] Add gitignore" />
+    <MESSAGE value="[wen] Refactoring Panel/Assistant features" />
+    <option name="LAST_COMMIT_MESSAGE" value="[wen] Refactoring Panel/Assistant features" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

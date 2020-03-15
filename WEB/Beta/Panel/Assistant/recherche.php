@@ -11,10 +11,13 @@ require_once "../../config.php";
 ?>
 <head>
     <link rel="stylesheet" href="../../CSS/form.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 <header>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <?php include("menu.php"); ?>
+
 </header>
 <div class="container">
     <div class="head">

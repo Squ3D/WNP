@@ -10,7 +10,7 @@ th, td {
     text-align: left;
     padding: 8px;
     color:black;
-;
+
 }
 
 tr:nth-child(even) {
@@ -24,3 +24,5 @@ th {
     opacity: 0.7;
     color: white;
 }
+
+

@@ -33,9 +33,6 @@ $temp = $_SESSION['Matricule'];
 
 </header>
 
-
-<body>
-
 <style>
 
     table {
@@ -65,6 +62,9 @@ $temp = $_SESSION['Matricule'];
     }
 
 </style>
+<body>
+
+
 
 <?php
 
@@ -111,7 +111,7 @@ try {
             $query .= $key . "=" . $valeurDelaColonne . "&";
         }
         $url = "valider.php?" . $query;
-        echo "<td><a href='$url'> Valider la fiche </a> </td>";
+        echo " <td><a class='white' href='$url'> Valider la fiche </a> </td>";
     }
 
 

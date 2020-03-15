@@ -20,7 +20,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff
+    color: white;
+}
+
+.white {
+    color:black;
 }
 
 #header {

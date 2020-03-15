@@ -11,8 +11,7 @@
 <header>
     <div id="header">
         <div class="logo">
-            <!-- <a href="#">CASH CASH</a> -->
-            <img src="icon.png" alt="icon"/>
+            <a href="./index.php"><img src="icon.png" alt= "logo"></a>
 
 
         </div>

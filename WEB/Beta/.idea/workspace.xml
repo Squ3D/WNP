@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="" />
+    <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="[wen] Refactoring Panel/Assistant features">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/tab.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/tab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Technicien/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Technicien/menutech.css" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/menutech.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Technicien/menutech.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/menutech.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Technicien/tech.css" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/tech.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

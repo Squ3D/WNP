@@ -19,9 +19,13 @@ $temp = $_SESSION['Matricule'];
 <html>
 
 <head>
+    <link rel="stylesheet" href="menutech.css"/>
+    <meta charset="utf-8"/>
+
 
 
 </head>
+
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <?php include("menutech.php"); ?>

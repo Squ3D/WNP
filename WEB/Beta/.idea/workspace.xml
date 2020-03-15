@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/client1.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/client1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/search.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/searchDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/searchDate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/searchNumTech.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/searchNumTech.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/statistique2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/statistique2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Technicien/tech.css" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/tech.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/@scripts/Affichage.php" beforeDir="false" afterPath="$PROJECT_DIR$/@scripts/Affichage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/kicked.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/kicked.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/statistique.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/statistique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Technicien/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Panel/Technicien/valider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/valider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +53,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584044615468</updated>
-      <workItem from="1584044616566" duration="5244000" />
+      <workItem from="1584044616566" duration="6033000" />
+      <workItem from="1584106232676" duration="4418000" />
+      <workItem from="1584268052306" duration="1943000" />
     </task>
     <servers />
   </component>
@@ -65,7 +67,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

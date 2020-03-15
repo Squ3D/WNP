@@ -1,3 +1,10 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../../CSS/form.css"/>
+</head>
+</html>
 <?php
 session_start();
 require_once "../../config.php";
@@ -45,69 +52,78 @@ if (isset($_POST['create'])) {
 <header>
 
     <?php include("menu.php"); ?>
+
 </header>
-
-<body background-color : blue>
-<center><h1>Création Intervention</h1></center>
-
-<div id="box">
-    <form name="watka" method="post">
-        <label>Numéro</label>
-        <input type="text" id="login" class="fadeIn second" name="1"
-               placeholder="Renseigner le numéro de fiche" size="200"
-               required>
-        <br>
-        <label>Adresse</label>
-        <input type="text" id="password" class="fadeIn third" name="2" placeholder="adresse" required>
-        <br>
-        <label>Heures</label>
-        <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"
-               required>
-        <br>
-        <label>Matric</label>
-        <?php
-        // Pour chaque techniciens
-        //            foreach ($techniciens as $technicien) {
-        //                // Pour chaque données du technicien
-        //                foreach ($technicien as $valeurDelaColonne) {
-        //                    // On affiche la valeur de la colonne
-        //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
-        //                }
-        //            }
-
-        Affichage::afficherCleEtrangeres($techniciens, "5");
-        ?>
-
-        <br>
-
-        <label>Cclient</label>
-        <?php
-        //            foreach ($clients as $client) {
-        //                foreach ($client as $valeurDelaColonne) {
-        //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
-        //                }
-        //            }
-
-        Affichage::afficherCleEtrangeres($clients, "6");
-        ?>
-        <br>
-        <label>Date</label>
-        <input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"
-               required>
-        <br>
-        <label>Distance</label>
-        <input type="text" id="password" class="fadeIn third" name="7"
-               placeholder="Renseigner la distance depuis l'agence"
-               required>
-        <br>
-
-        <input name="create" method="post" type="submit" class="fadeIn fourth">
-
-    </form>
+<div class="container">
+    <div class="head">
+        <h2>Intervention</h2>
+    </div>
 
 
+    <div id="box">
+        <form name="watka" method="post">
+
+            <input type="text" id="login" class="fadeIn second" name="1"
+                   placeholder="Renseigner le numéro de fiche" size="200"
+                   required>
+            <br>
+
+            <input type="text" id="password" class="fadeIn third" name="2" placeholder="adresse" required>
+            <br>
+
+            <input type="text" id="password" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"
+                   required>
+            <br>
+
+            <div class="affichage">
+                <label>Matric</label>
+                <?php
+                // Pour chaque techniciens
+                //            foreach ($techniciens as $technicien) {
+                //                // Pour chaque données du technicien
+                //                foreach ($technicien as $valeurDelaColonne) {
+                //                    // On affiche la valeur de la colonne
+                //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
+                //                }
+                //            }
+
+                Affichage::afficherCleEtrangeres($techniciens, "5");
+                ?>  </div>
+
+
+            <br>
+
+            <label>Cclient</label>
+            <?php
+            //            foreach ($clients as $client) {
+            //                foreach ($client as $valeurDelaColonne) {
+            //                    echo "<option value=\"$valeurDelaColonne\">$valeurDelaColonne</option>";
+            //                }
+            //            }
+
+            Affichage::afficherCleEtrangeres($clients, "6");
+            ?>
+            <br>
+
+            <input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"
+                   required>
+            <br>
+
+            <input type="text" id="password" class="fadeIn third" name="7"
+                   placeholder="Renseigner la distance depuis l'agence"
+                   required>
+            <br>
+
+
+            <div class="message">Message Sent</div>
+            <button id="submit" name=create type="submit">
+                Valider
+            </button>
+        </form>
+
+
+    </div>
 </div>
-</body>
 
       
       

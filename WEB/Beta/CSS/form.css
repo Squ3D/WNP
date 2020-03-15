@@ -6,9 +6,9 @@ body {
 
 }
 .container {
-    margin-top:25%;
+
     max-width:600px;
-    margin:0 auto;
+    margin: 0 auto;
     text-align:center;
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
@@ -58,6 +58,10 @@ input, textarea {
     box-sizing: border-box;
     width: 80%;
     max-width: 600px;
+}
+
+label{
+    color:black;
 }
 ::-webkit-input-placeholder {
     color: black;
@@ -163,3 +167,21 @@ th {
     color: white;
 }
 
+select{
+
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #88b2d1;
+    color: white;
+    padding: 12px;
+    width: 150px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    outline: none;
+
+}

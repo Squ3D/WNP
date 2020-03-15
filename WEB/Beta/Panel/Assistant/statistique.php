@@ -19,10 +19,7 @@ require_once "../../config.php";
 
 </header>
 
-<style>
 
-
-</style>
 
 
 <body>

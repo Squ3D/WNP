@@ -10,10 +10,7 @@
 <header>
     <div id="header">
         <div class="logo">
-            <a href="./index.php"><img src="icon.png" alt= "logo"></a>
-
-
-
+            <a href="./index.php"><img src="icon.png" alt= "logo" width="40px" height="40px"></a>
         </div>
         <nav>
 

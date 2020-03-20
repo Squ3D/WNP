@@ -89,8 +89,6 @@ require_once "../../config.php";
 
 </body>
 </div>
-<footer>
-
-</footer>
+	<?php include("footer.php");?>
 
 </html>

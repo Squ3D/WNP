@@ -98,9 +98,7 @@ WHERE contrat_maintenance.date_eche >= '2020-01-01' ");
 
 </body>
 </div>
-<footer>
-
-</footer>
+    <?php include("footer.php");?>
 
 </html>
 

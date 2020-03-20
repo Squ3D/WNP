@@ -2,6 +2,7 @@
 session_start();
 require_once "../../config.php";
 require_once "../../@scripts/Affichage.php";
+$_SESSION['numi'] = $_POST['1'];
 
 //Utiliser l'extract $POST
 
@@ -27,10 +28,6 @@ if (isset($_POST['update'])) {
     $heure_visite = $_POST['4'] ?? die("Heure de visite manquante");
     $Matricule = $_POST['5'] ?? die("Numéro de matricule manquant");
     $code_Client = $_POST['6'] ?? die("Numéro client  manquant");
-//echo "<pre>";
-//var_dump($_POST);
-//echo "</pre>";die;
-
     $query = $conn->prepare(
         "UPDATE Intervention 
                     SET 
@@ -47,38 +44,39 @@ if (isset($_POST['update'])) {
     } else {
         echo "Erreur lors de la création d'une intervention";
     }
-
-
 }
 ?>
 
-<header>
 
     <?php include("menu.php"); ?>
-</header>
+    <link rel="stylesheet" href="../../CSS/form.css"/>
+     <link rel="stylesheet" href="menu.css"/>
 
-
-<body background-color : blue>
-<center><h1>Modification Intervention</h1></center>
-
+<div class="container">
+     <div class="head">
+     <h2>Modification Intervention</h2></center>
+     </div>
+1
 <div id="box">
+  <div id="box">
     <form name="watka" method="post">
-        <label>Numéro</label>
+
         <input type="text" id="login" class="fadeIn second" name="1"
                placeholder="Renseigner le numéro de fiche" size="200"
                required value="<?php echo $_POST['1'] ?? die("Num Fiche manquant"); ?>">
+               <?php $numi = $_POST['1']; ?>
         <br>
-        <label>Adresse</label>
+   
         <input type="text" id="addresse" class="fadeIn third" name="2"
                placeholder="adresse"
                required value="<?php echo $_POST['2'] ?? die("Addresse manquante"); ?>">
         <br>
-        <label>Heures</label>
+
         <input type="text" id="heure_visite" class="fadeIn third" name="4" placeholder="Renseigner l'heure de visite"
                value="<?php echo $_POST['4'] ?? die("Heure visite manquante"); ?>"
                required>
         <br>
-        <label>Matric</label>
+        <div class="bloc1">
         <?php
         // Pour chaque techniciens
         //            foreach ($techniciens as $technicien) {
@@ -93,8 +91,10 @@ if (isset($_POST['update'])) {
         ?>
 
         <br>
+    </div>
 
-        <label>Cclient</label>
+    <div class="bloc2">
+
         <?php
         //            foreach ($clients as $client) {
         //                foreach ($client as $valeurDelaColonne) {
@@ -105,7 +105,7 @@ if (isset($_POST['update'])) {
         Affichage::afficherCleEtrangeres($clients, "6");
         ?>
         <br>
-        <label>Date</label>
+    
         <input type="date" id="login" class="fadeIn second" name="3" placeholder="Renseigner la date de visite"
                required value="<?php echo $_POST['3'] ?? die("Date de visite"); ?>">
         <br>
@@ -114,10 +114,14 @@ if (isset($_POST['update'])) {
         <a href="../../fpdf/testpdf.php"><input type="button" value="Exporter"></a>
 
     </form>
+</div>
 
 
 </div>
+
+<?php include("footer.php"); ?>
 </body>
+
 
 
 

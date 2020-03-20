@@ -129,9 +129,7 @@ try {
 ?>
 
 </body>
-<footer>
-
-</footer>
+	<?php include("footer.php");?>
 
 </html>
 

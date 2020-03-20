@@ -123,9 +123,7 @@ if (empty($_SESSION)) {
 
 </body>
 </div>
-<footer>
-
-</footer>
+	<?php include("footer.php");?>
 
 </html>
 

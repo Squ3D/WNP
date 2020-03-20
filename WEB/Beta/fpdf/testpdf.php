@@ -1,21 +1,24 @@
 <?php
+session_start();
 require('fpdf.php');
 require('config.php');
 
-$numi =
-$sql = $conn->query("SELECT `adresse` FROM WNP.Intervention WHERE `Numero_Fiche`= 1");
+$numi = $_SESSION['numi'];
+
+
+$sql = $conn->query("SELECT `adresse` FROM WNP.Intervention WHERE `Numero_Fiche`= $numi");
 $data = $sql->fetchColumn();
 
-$sqla = $conn->query("SELECT `date_visite` FROM WNP.Intervention WHERE `Numero_Fiche`= 1");
+$sqla = $conn->query("SELECT `date_visite` FROM WNP.Intervention WHERE `Numero_Fiche`= $numi");
 $datb = $sqla->fetchColumn();
 
-$sqlb = $conn->query("SELECT `heure_visite` FROM WNP.Intervention WHERE `Numero_Fiche` = 1");
+$sqlb = $conn->query("SELECT `heure_visite` FROM WNP.Intervention WHERE `Numero_Fiche` = $numi");
 $datc = $sqlb->fetchColumn();
 
 $sqlc = $conn->query("SELECT DISTINCT nom FROM WNP.Intervention INNER JOIN employe on WNP.Intervention.Num_Matricule = employe.Num_Matricule");
 $datd = $sqlc->fetchColumn();
 
-$sqld = $conn->query("SELECT `Code_Client` FROM WNP.Intervention WHERE `Numero_Fiche`= 1");
+$sqld = $conn->query("SELECT `Code_Client` FROM WNP.Intervention WHERE `Numero_Fiche`= $numi");
 $date = $sqld->fetchColumn();
 
 

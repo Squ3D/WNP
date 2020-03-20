@@ -52,6 +52,7 @@ if (isset($_POST['wata'])) {
 
 
 </div>
+	<?php include("footer.php");?>
 </body>
       
       

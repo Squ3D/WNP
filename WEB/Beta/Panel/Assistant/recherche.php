@@ -45,4 +45,5 @@ require_once "../../config.php";
     </form>
 </div>
 </body>
+	<?php include("footer.php");?>
 </html>

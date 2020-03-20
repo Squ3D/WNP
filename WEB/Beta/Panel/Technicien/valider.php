@@ -53,6 +53,7 @@
 </footer>
 
 </html>
+	<?php include("footer.php");?>
 
 
 </style>

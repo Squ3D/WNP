@@ -54,9 +54,8 @@ require_once "../../config.php";
 
 </body>
 
-<footer>
+</div>
 
-</footer>
-
+	<?php include("footer.php");?>
 </html>
 

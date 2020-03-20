@@ -87,8 +87,10 @@ if (isset($_POST['create'])) {
                 //                }
                 //            }
 
-                Affichage::afficherCleEtrangeres($techniciens, "5", "Techniciens");
-                ?>  </div>
+                Affichage::afficherCleEtrangeres($techniciens, "5","Wesh");
+                ?>  
+            </div>
+        </br>
 
 
             <div class="bloc2">
@@ -122,7 +124,9 @@ if (isset($_POST['create'])) {
 
 
     </div>
+       
 </div>
+ <?php include("footer.php");?>
 
       
       

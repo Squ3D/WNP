@@ -2,14 +2,14 @@ table {
     border-collapse: collapse;
     width: 50%;
     margin-left: 23%;
-    margin-top:5%;
+    margin-top: 5%;
     font-family: sans-serif;
 }
 
 th, td {
     text-align: left;
     padding: 8px;
-    color:black;
+    color: black;
 
 }
 

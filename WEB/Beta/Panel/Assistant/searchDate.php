@@ -53,17 +53,7 @@ require_once "../../config.php";
     $sqlu = $conn->query('SELECT * FROM Intervention WHERE date_visite LIKE' . $date);
 
     while ($donnees = $sqlu->fetch()) {
-        // on affiche toutes les infos de l'intervention de la date passée dans le post
-        /* echo "<table>";
-         echo "</TR>";
-         echo "<TH>Numero fiche :", "$donnees[Numero_Fiche] </TH>";
-         echo "<TH>Adresse :", "$donnees[adresse] </TH>";
-         echo "<TH>Date visite", "$donnees[date_visite] </TH>";
-         echo "<TH>Heure visite:", "$donnees[heure_visite] </TH>";
-         echo "<TH>Numéro technicien :", " $donnees[Num_Matricule] </TH>";
-         echo "<TH>Numéro Client:", "$donnees[Code_Client] </TH>";
-         echo "</TR>";
-         echo "</table>";*/
+
 
         echo "<table class=\"responstable\">";
         echo "<tr><form method='post' action='modif.php'>";

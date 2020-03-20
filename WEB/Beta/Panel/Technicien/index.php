@@ -23,7 +23,6 @@ $temp = $_SESSION['Matricule'];
     <meta charset="utf-8"/>
 
 
-
 </head>
 
 <header>
@@ -63,7 +62,6 @@ $temp = $_SESSION['Matricule'];
 
 </style>
 <body>
-
 
 
 <?php

@@ -4,8 +4,7 @@
     <list default="true" id="02d132f7-081e-4cd1-ba07-86edcc1ec0c4" name="Default Changelist" comment="[wen] Refactoring Panel/Assistant features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CSS/tab.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/tab.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panel/Assistant/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panel/Assistant/searchDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Assistant/searchDate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Panel/Technicien/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Panel/Technicien/menutech.css" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/menutech.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Panel/Technicien/menutech.php" beforeDir="false" afterPath="$PROJECT_DIR$/Panel/Technicien/menutech.php" afterDir="false" />

@@ -1,5 +1,4 @@
 
-
 body {
     font-family: sans-serif;
     background: white;
@@ -7,7 +6,6 @@ body {
     color: #777777;
 
 }
-
 
 
 .container {
@@ -26,7 +24,7 @@ body {
 #contact input[type="url"],
 #contact textarea,
 #contact button[type="submit"] {
-    font: 400 12px/16px  sans-serif;
+    font: 400 12px/16px sans-serif;
 }
 
 #contact {
@@ -88,7 +86,7 @@ fieldset {
     cursor: pointer;
     width: 100%;
     border: none;
-    background:  #92badd;
+    background: #92badd;
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
@@ -134,24 +132,26 @@ fieldset {
 
 
 input {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
+
 textarea {
-    height:100px;
-    margin-bottom:10px;
+    height: 100px;
+    margin-bottom: 10px;
 }
-input:first-of-type
-{
-    margin-top:5px;
+
+input:first-of-type {
+    margin-top: 5px;
 }
+
 input, textarea {
     font-size: 1em;
     padding: 15px 10px 10px;
-    font-family: 'Source Sans Pro',arial,sans-serif;
+    font-family: 'Source Sans Pro', arial, sans-serif;
     border: 1px solid #cecece;
     background: #d7d7d7;
-    color:black;
+    color: black;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -164,29 +164,34 @@ input, textarea {
     width: 80%;
     max-width: 600px;
 }
+
 ::-webkit-input-placeholder {
     color: black;
 }
+
 :-moz-placeholder {
     color: black;
 }
+
 ::-moz-placeholder {
     color: black;
 }
+
 :-ms-input-placeholder {
     color: black;
 }
 
 .head {
-    margin-top:30%;
-    -webkit-border-radius:6px 6px 0px 0px;
-    -moz-border-radius:6px 6px 0px 0px;
-    border-radius:6px 6px 0px 0px;
+    margin-top: 30%;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
     background-color: #88b2d1;
-    color:#FAFAFA;
+    color: #FAFAFA;
 }
+
 h2 {
-    text-align:center;
-    padding:18px 0 18px 0;
+    text-align: center;
+    padding: 18px 0 18px 0;
     font-size: 1.4em;
 }

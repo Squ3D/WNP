@@ -5,13 +5,12 @@
     <meta charset="utf-8"/>
 
 
-
 </head>
 
 <header>
     <div id="header">
         <div class="logo">
-            <a href="./index.php"><img src="icon.png" alt= "logo"></a>
+            <a href="./index.php"><img src="icon.png" alt="logo"></a>
 
 
         </div>

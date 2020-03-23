@@ -46,7 +46,7 @@ if (isset($_POST['update'])) {
     }
 }
 ?>
-
+<body>
 
     <?php include("menu.php"); ?>
     <link rel="stylesheet" href="../../CSS/form.css"/>
@@ -56,7 +56,7 @@ if (isset($_POST['update'])) {
      <div class="head">
      <h2>Modification Intervention</h2></center>
      </div>
-1
+
 <div id="box">
   <div id="box">
     <form name="watka" method="post">
@@ -120,6 +120,8 @@ if (isset($_POST['update'])) {
 </div>
 
 <?php include("footer.php"); ?>
+</div>
+
 </body>
 
 

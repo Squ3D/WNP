@@ -72,7 +72,7 @@ try {
     inner join Client on contrat_maintenance.code_client = Client.Code_Client
 
 
-WHERE contrat_maintenance.date_eche >= '2020-01-01' ");
+WHERE contrat_maintenance.date_eche >= '2020-01-01' ORDER BY date_eche");
     $data = $sqlu->fetchAll();
 
     // Pour chaque données on ajoute une ligne dans le tableau d'affichage

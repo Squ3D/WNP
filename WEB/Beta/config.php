@@ -16,8 +16,8 @@ if (1 == $devMode) {
     $dbName = "WNP";
 } else {
     $username = "naimo_isse";
-    $password = ".]IvA{ZE~5$7";
-    $dbName = "naimo_WNP";
+    $password = "";
+    $dbName = "";
 }
 
 
